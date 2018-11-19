@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+    width:100px;
+    height:100px;
+    background-image: url("C:/Users/Daniel Osorio/Desktop/Programacion/proyectoFinal/static/avion2.png");
+    background-size: 100%;
+    position: relative;
+    animation-name: vuelo;
+    animation-duration: 3s;    
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
+{% block body  %}
+@keyframes vuelo {
+    from {top: {{ saliday }}px; left: {{ salidax }}px;}
+    to {top: {{ llegaday }}px; left: {{ llegadax }}px;}
+}
+{% endblock %}
+</style>
+</head>
+<body background="C:\Users\Daniel Osorio\Desktop\Programacion\proyectoFinal\static\mapa.jpg" style="background-size: 1400px 650px; background-repeat: no-repeat;">
+
+<div></div>
+
+</body>
+</html>

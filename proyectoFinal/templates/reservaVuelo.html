@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PAGINA WEB-reservaVuelo</title>
+</head>
+<body background="\static\fondo.jpg" style="background-repeat: no-repeat;">
+<header>AEROPYTHON</header>
+<h1>Reservar Vuelo</h1><br>
+<form method="POST" action="{{ url_for('reservarVuelo') }}">
+	<p>Ciudad de salida:</p>
+	<select name="salidas">
+	{% block body  %}
+	{% for i in salidas %}
+		<option value="{{i}}">{{i}}</option>
+	{% endfor %}<br>
+	</select>
+	<p>Ciudad de llegada:</p>
+	<select name="llegadas">
+	{% for i in llegadas %}
+		<option value="{{i}}">{{i}}</option>
+	{% endfor %}<br>
+	</select>
+	<p>Tipo de comida (# significa que depende de la clase):</p>
+	<select name="comidas">
+	{% for i in comidas %}
+		<option value="{{i}}">{{i}}</option>
+	{% endfor %}
+	<option value="noAplica">No considerar</option>
+	</select><p>Numero de Escalas:</p>
+	<select name="numEscalas">
+	{% for i in numEscalas1 %}
+		<option value="{{i}}">{{i}}</option>
+	{% endfor %}
+	<option value="noAplica">No considerar</option>
+	</select>
+	{% endblock %}
+   <p>¿Considerar Aerolineas preferidas?:</p>
+   <input type="radio" name="considerarAero" value="si">si
+   <input type="radio" name="considerarAero" value="no">no<br>
+	<p>Hora de salida:</p>
+	<select name="horaSalida">
+	{% for i in horasSalida %}
+		<option value="{{i}}">{{i}}</option>
+	{% endfor %}
+	<option value="noAplica">No considerar</option>
+	</select>
+	<p>Hora de llegada:</p>
+	<select name="horaLlegada">
+	{% for i in horasLlegada %}
+		<option value="{{i}}">{{i}}</option>
+	{% endfor %}
+	<option value="noAplica">No considerar</option>
+	</select>
+	<input type="submit" name="buscarVuelos" value="Buscar vuelos">
+</form><br>
+
+</body>
+</html>
+	

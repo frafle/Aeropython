@@ -1,0 +1,1 @@
+[{'ID': 'ejemplo1', 'contraseña': 'ejemplo1', 'preferencias': ['AA', 'DL', 'YV'], 'historial': []}]

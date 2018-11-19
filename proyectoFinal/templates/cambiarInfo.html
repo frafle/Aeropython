@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PAGINA WEB-cambiarInfo</title>
+{% with messages = get_flashed_messages() %}
+	         {% if messages %}
+	            <script>
+	      var messages = {{ messages | safe }};
+	      for (var i=0; i<messages.length; i++) {
+	        alert(messages[i]);
+	      }
+	    </script>
+	    {%endif%}
+	    {%endwith%}
+</head>
+<body background="\static\fondo.jpg" style="background-repeat: no-repeat;">
+<header>AEROPYTHON</header>
+<h1>Cambiar informacion</h1><br>
+<form method="POST" action="{{ url_for('cambiarInfo') }}">
+	<p>Nuevo nombre de usuario:</p><br>
+	<input type="text" name="nombreUsuario"><br>
+	<p>Antigua Contraseña:</p><br>
+	<input type="password" name="contraseña"><br>
+	<p>Nuevas Contraseña:</p><br>
+	<input type="password" name="contraseña2"><br>
+	<p>Aerolineas Preferidas:</p><br>
+	{% block body  %}
+	{% for i in aerolineas %}
+		<input type="checkbox" name="aerolineas" value="{{i}}">{{i}}
+	{% endfor %}
+	{% endblock %}<br>
+	<br><input type="submit" align="center " value="Realizar cambios"> 
+</form><br>
+
+</body>
+</html>
+	

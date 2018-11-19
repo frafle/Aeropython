@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PAGINA WEB-reservaVuelo</title>
+</head>
+<body background="\static\fondo.jpg" style="background-repeat: no-repeat;">
+<header>AEROPYTHON</header>
+<h1>Informacion del usuario</h1><br>
+	{% block body  %}
+	{{listaUsuarios[indice]}}
+	{% endblock %}<br>
+<form method="POST" action="{{ url_for('infoUsuario') }}"><br>
+	<input type="submit" name="boton" value="Cambiar informacion">
+	<input type="submit" name="boton" value="Borrar historial">
+
+</body>
+</html>
+	

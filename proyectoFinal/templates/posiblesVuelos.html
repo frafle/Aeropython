@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PAGINA WEB-reservaVuelo</title>
+</head>
+<body background="\static\fondo.jpg" style="background-repeat: no-repeat;">
+<header>AEROPYTHON</header>
+<h1>Resultados</h1><br>
+<form method="POST" action="{{ url_for('resultados') }}">
+	{% block body  %}
+	{%for i in resultado%}
+		{{i}}<br><input type="radio" name="vuelo" value="{{i}}"><br>
+	{%endfor%}
+	{% endblock %}
+	<input type="submit" name="reservarVuelo" value="Reservar vuelo">
+</form><br>
+<a href="{{url_for('animacion')}}"> Ver animacion</a></p>
+
+</body>
+</html>
+	

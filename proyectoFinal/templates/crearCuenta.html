@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PAGINA WEB-crearCuenta</title>
+{% with messages = get_flashed_messages() %}
+	         {% if messages %}
+	            <script>
+	      var messages = {{ messages | safe }};
+	      for (var i=0; i<messages.length; i++) {
+	        alert(messages[i]);
+	      }
+	    </script>
+	    {%endif%}
+	    {%endwith%}
+</head>
+<body background="\static\fondo.jpg" style="background-repeat: no-repeat;">
+<header>AEROPYTHON</header>
+<h1>Crear cuenta</h1><br>
+<form method="POST" action="{{ url_for('crearCuenta') }}">
+	<p>Nombre de usuario:</p><br>
+	<input type="text" name="nombreUsuario"><br>
+	<p>Contraseña:</p><br>
+	<input type="password" name="contraseña"><br>
+	<p>Aerolineas Preferidas:</p><br>
+	{% block body  %}
+	{% for i in aerolineas %}
+		<input type="checkbox" name="aerolineas" value="{{i}}">{{i}}
+	{% endfor %}
+	{% endblock %}<br>
+	<br><input type="submit" align="center " value="Crear cuenta"> 
+</form><br>
+
+</body>
+</html>
+	

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PAGINA WEB-paginaPrincipal</title>
+{% with messages = get_flashed_messages() %}
+	         {% if messages %}
+	            <script>
+	      var messages = {{ messages | safe }};
+	      for (var i=0; i<messages.length; i++) {
+	        alert(messages[i]);
+	      }
+	    </script>
+	    {%endif%}
+	    {%endwith%}
+</head>
+<body background="\static\fondo.jpg" style="background-repeat: no-repeat;">
+<h1><header>AEROPYTHON</header></h1><br>
+<form action="{{url_for('paginaPrincipal')}}" method="POST">
+<input type="submit" name="boton" value="Reserva tu vuelo" align="left">
+<input type="submit" name="boton" value="Informacion del usuario" style="float: right;">
+{% block body  %}
+{%if "usuario" in session%}
+<input type="submit" name="boton" value="Cerrar sesion" style="float: right;">
+{%else%}
+<input type="submit" name="boton" value="Iniciar sesion" style="float: right;">
+{%endif%}
+{% endblock %}
+</form><br>
+<div style="text-align: center;">
+<iframe src="https://www.google.com/maps/d/embed?mid=1ho-mBw9PZYmO9YodLh7YDl9dE6KXXFEg&hl=en" width="640" height="480"></iframe></div>
+
+
+</body>
+</html>
+	

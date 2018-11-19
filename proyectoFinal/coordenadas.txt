@@ -1,0 +1,23 @@
+ABQ -0800 400 370 Albuquerque, New Mexico
+ATL -0600 1000 370 Atlanta, Georgia
+BNA -0700 900 320 Nashville, Tennessee
+BOS -0600 1200 95 Boston, Massachusetts
+DCA -0600 120 30 Washington D.C. (National)
+DEN -0800 410 230 Denver, Colorado
+DFW -0700 700 430 Dallas/Fort Worth, Texas
+DTW -0600 960 150 Detroit, Michigan
+HOU -0700 700 430 Houston, Texas (Hobby)
+JFK -0600 1100 120 New York (Kennedy)
+LAX -0900 120 320 Los Angeles, California
+MIA -0600 1100 500 Miami, Florida
+MSP -0700 700 80 Minneapolis/St Paul, Minnesota
+MSY -0700 800 440 New Orleans, Louisiana
+ORD -0700 850 250 Chicago, Illinois
+PHL -0600 1180 200 Philadelphia, Pennsilvania/Wilmington, Delaware
+PHX -0800 250 320 Phoenix, Arizona
+PVD -0600 1220 120 Providence/Newport, Rhode Island
+RDU -0600 1100 290 Raleigh/Durham, North Carolina
+SEA -0900  120  30 Seattle/Tacoma, Washington
+SFO -0900  90 270 San Francisco, California
+STL -0700 800 260 St Louis, Missouri
+TPA -0600 1100 500 Tampa, Florida
